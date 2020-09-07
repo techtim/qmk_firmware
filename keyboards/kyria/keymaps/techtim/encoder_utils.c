@@ -49,9 +49,9 @@ void encoder_action_word_nav(uint8_t clockwise) {
 
 void encoder_action_left_right(uint8_t clockwise) {
     if (clockwise) {
-        tap_code(KC_RIGHT);
+        tap_code16(C(KC_TAB));
     } else {
-        tap_code(KC_LEFT);
+        tap_code16(S(C(KC_TAB)));
     }
 }
 

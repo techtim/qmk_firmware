@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Base Layer: QWERTY
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * | TAB    |   Q  |   W  |   E  |   R  |   T  |                              |   Y  |   U  |   I  |   O  |   P  | BSPC   |
+ * | ESC:""    |   Q  |   W  |   E  |   R  |   T  |                              |   Y  |   U  |   I  |   O  |   P  | BSPC   |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * | LCTL   |   A  |   S  |  D   |   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : |  ' "   |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
@@ -44,8 +44,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_QWERTY] = LAYOUT(
-        KC_TAB,  KC_Q,   KC_W,   KC_E,   KC_R,    KC_T,                                                KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
-        KC_LCTL, KC_A,   KC_S,   KC_D,   KC_F,    KC_G,                                                KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+        KC_GESC,  KC_Q,   KC_W,   KC_E,   KC_R,    KC_T,                                                KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
+        MT(MOD_LCTL, KC_TAB), KC_A,   KC_S,   KC_D,   KC_F,    KC_G,                                    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
         KC_LSFT, KC_Z,   KC_X,   KC_C,   KC_V,    KC_B, KC_BSPC, MO(_RAISE), MO(_ADJUST), KC_ESC,     KC_N,    KC_M,    KC_COMM, KC_DOT,   KC_SLSH, MO(_LOWER),
                          ENC_MODE_L,  KC_LALT, KC_LGUI,  KC_SPC, MO(_LOWER),    KC_ENT,     KC_SPC,     KC_LBRC,  KC_RBRC,  MO(_RAISE)
     ),
@@ -53,9 +53,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Lower Layer: Symbols, Navigation
  */
     [_LOWER] = LAYOUT(
-      _______, KC_HASH, KC_DLR,  KC_LCBR, KC_RCBR, KC_PIPE,                                     _______, _______, _______, _______, _______, KC_PIPE,
-      _______, KC_EXLM, KC_AT,   KC_LPRN, KC_RPRN, KC_GRV,                                      KC_PGUP, KC_LEFT, KC_UP,   KC_RGHT, _______, KC_QUOT,
-      _______, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, KC_DEL, _______, _______, _______, KC_PGDN, KC_HOME, KC_DOWN, KC_END,  _______, KC_MINS,
+      KC_TILD, KC_HASH, KC_DLR,  KC_LCBR, KC_RCBR, KC_PIPE,                                    _______, KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,
+      _______, KC_EXLM, KC_AT,   KC_LPRN, KC_RPRN, KC_GRV,                                     KC_PGUP, KC_LEFT, KC_UP,   KC_RGHT, _______, KC_LSFT,
+      _______, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, KC_DEL, _______, _______, _______, KC_PGDN, KC_HOME, KC_DOWN, KC_END,  _______, _______,
                                  _______, _______, _______, KC_SCLN, KC_EQL,  KC_EQL,  KC_SCLN, _______, _______, _______
     ),
 /*
@@ -71,11 +71,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        |      |      |      |      |      |  |      |      | 0 )  |      |      |
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
+ * CG_TOGG  Toggle Control and GUI swap on both sides
  */
     [_RAISE] = LAYOUT(
-      KC_VOLU, KC_MPRV, KC_F7,   KC_F8,   KC_F9,   _______,                                     _______, KC_7,    KC_8,    KC_9,    KC_MINS, KC_ASTR,
-      KC_VOLD, KC_MPLY, KC_F4,   KC_F5,   KC_F6,   _______,                                     _______, KC_4,    KC_5,    KC_6,    KC_PLUS, KC_RCTL,
-      KC_MUTE, KC_MNXT, KC_F1,   KC_F2,   KC_F3,   _______, _______, _______, _______, _______, _______, KC_1,    KC_2,    KC_3,    KC_BSLASH, _______,
+      _______, KC_MPRV, KC_F7,   KC_F8,   KC_F9,   KC_VOLU,                                     _______, KC_7,    KC_8,    KC_9,    KC_MINS, KC_ASTR,
+      _______, KC_MPLY, KC_F4,   KC_F5,   KC_F6,   KC_VOLD,                                     _______, KC_4,    KC_5,    KC_6,    KC_EQL,  KC_RCTL,
+      _______, KC_MNXT, KC_F1,   KC_F2,   KC_F3,   KC_MUTE, _______, _______, _______, _______, _______, KC_1,    KC_2,    KC_3,    KC_BSLASH, KC_LSFT,
                                  _______, _______, _______, _______, _______, _______, _______, KC_0,    _______, _______
     ),
 /*

@@ -38,6 +38,8 @@
 
 #ifdef ENCODER_ENABLE
 #    define ENCODER_DIRECTION_FLIP
-#    define ENCODER_RESOLUTION 2
+#    define ENCODER_RESOLUTION 4
 #endif
 
+#define GRAVE_ESC_ALT_OVERRIDE 0
+#define GRAVE_ESC_CTRL_OVERRIDE 0 //Always send Escape if Control is pressed
