@@ -43,3 +43,4 @@
 
 #define GRAVE_ESC_ALT_OVERRIDE 0
 #define GRAVE_ESC_CTRL_OVERRIDE 0 //Always send Escape if Control is pressed
+#define GRAVE_ESC_SHIFT_OVERRIDE 0

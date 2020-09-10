@@ -7,6 +7,7 @@ enum layers { _QWERTY = 0, _LOWER, _RAISE, _ADJUST };
 enum custom_keycodes {
     ENC_MODE_L = SAFE_RANGE,
     ENC_MODE_R,
+    MACRO_CTL_ESC,
     TMB_MODE,
 };
 
