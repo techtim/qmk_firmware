@@ -44,17 +44,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `----------------------------------'  `----------------------------------'
  */
     [_QWERTY] = LAYOUT(
-        MACRO_CTL_ESC,        KC_Q,   KC_W,   KC_E,   KC_R,    KC_T,                                    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
-        MT(MOD_LCTL, KC_TAB), KC_A,   KC_S,   KC_D,   KC_F,    KC_G,                                    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-        KC_LSFT,              KC_Z,   KC_X,   KC_C,   KC_V,    KC_B, KC_BSPC, MO(_RAISE), MO(_ADJUST),  KC_ESC,     KC_N,    KC_M,    KC_COMM, KC_DOT,   KC_SLSH, MO(_LOWER),
-                              ENC_MODE_L,  KC_LALT, KC_LGUI, KC_SPC, MO(_LOWER), KC_ENT,  KC_SPC,       KC_LBRC,  KC_RBRC,  MO(_RAISE)
+        MACRO_CTL_ESC,        KC_Q,   KC_W,   KC_E,   KC_R,    KC_T,                                           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
+        MT(MOD_LCTL, KC_TAB), KC_A,   KC_S,   KC_D,   KC_F,    KC_G,                                           KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+        KC_LSFT,              KC_Z,   KC_X,   KC_C,   KC_V,    KC_B, KC_BSPC, MO(_RAISE), MO(_ADJUST), KC_ESC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, MO(_LOWER),
+                                      ENC_MODE_L,  KC_LALT, KC_LGUI, KC_SPC,  MO(_LOWER), KC_ENT,      KC_SPC, KC_LBRC, KC_RBRC,  MO(_RAISE)
     ),
 /*
  * Lower Layer: Symbols, Navigation
  */
     [_LOWER] = LAYOUT(
-      KC_TILD, KC_HASH, KC_DLR,  KC_LCBR, KC_RCBR, KC_PIPE,                                    _______, KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,
-      _______, KC_EXLM, KC_AT,   KC_LPRN, KC_RPRN, KC_GRV,                                     KC_PGUP, KC_LEFT, KC_UP,   KC_RGHT, _______, KC_LSFT,
+      KC_TILD, S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5),                                    S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), KC_DEL,
+      _______, KC_HASH, KC_AT,   KC_LPRN, KC_RPRN, KC_GRV,                                     KC_PGUP, KC_LEFT, KC_UP,   KC_RGHT, KC_PIPE, KC_LSFT,
       _______, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, KC_DEL, _______, _______, _______, KC_PGDN, KC_HOME, KC_DOWN, KC_END,  _______, _______,
                                  _______, _______, _______, KC_SCLN, KC_EQL,  KC_EQL,  KC_SCLN, _______, _______, _______
     ),
@@ -71,7 +71,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        |      |      |      |      |      |  |      |      | 0 )  |      |      |
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
- * CG_TOGG  Toggle Control and GUI swap on both sides
  */
     [_RAISE] = LAYOUT(
       _______, KC_MPRV, KC_F7,   KC_F8,   KC_F9,   KC_VOLU,                                     _______, KC_7,    KC_8,    KC_9,    KC_MINS, KC_ASTR,
@@ -81,9 +80,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 /*
  * Adjust Layer: Function keys, RGB
-  */
+ * CG_TOGG  Toggle Control and GUI swap on both sides
+ * AG_TOGG Toggle Alt and GUI swap on both sides
+ */
     [_ADJUST] = LAYOUT(
-      _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                                       KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
+      _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                                       KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  AG_TOGG,
       _______, RGB_TOG, RGB_SAI, RGB_HUI, RGB_VAI, RGB_MOD,                                     _______, _______, _______, KC_F11,  KC_F12,  _______,
       _______, _______, RGB_SAD, RGB_HUD, RGB_VAD, RGB_RMOD,_______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
