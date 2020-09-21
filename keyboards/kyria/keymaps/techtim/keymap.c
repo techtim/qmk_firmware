@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MACRO_CTL_ESC,        KC_Q,   KC_W,   KC_E,   KC_R,    KC_T,                                           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
         MT(MOD_LCTL, KC_TAB), KC_A,   KC_S,   KC_D,   KC_F,    KC_G,                                           KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
         KC_LSFT,              KC_Z,   KC_X,   KC_C,   KC_V,    KC_B, KC_BSPC, MO(_RAISE), MO(_ADJUST), KC_ESC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, MO(_LOWER),
-                                      ENC_MODE_L,  KC_LALT, KC_LGUI, KC_SPC,  MO(_LOWER), KC_ENT,      KC_SPC, KC_LBRC, KC_RBRC,  MO(_RAISE)
+                                      ENC_MODE_L,  KC_LALT, KC_LGUI, KC_SPC,  MO(_LOWER), KC_ENT, KC_SPC, KC_LBRC, KC_RBRC,  MO(_RAISE)
     ),
 /*
  * Lower Layer: Symbols, Navigation
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_LOWER] = LAYOUT(
       KC_TILD, S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5),                                    S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), KC_DEL,
       _______, KC_HASH, KC_AT,   KC_LPRN, KC_RPRN, KC_GRV,                                     KC_PGUP, KC_LEFT, KC_UP,   KC_RGHT, KC_PIPE, KC_LSFT,
-      _______, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, KC_DEL, _______, _______, _______, KC_PGDN, KC_HOME, KC_DOWN, KC_END,  _______, _______,
+      _______, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, KC_DEL, _______, _______, _______, KC_PGDN, KC_HOME, KC_DOWN, KC_END, S(KC_SLSH), _______,
                                  _______, _______, _______, KC_SCLN, KC_EQL,  KC_EQL,  KC_SCLN, _______, _______, _______
     ),
 /*
