@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MACRO_CTL_ESC,        KC_Q,   KC_W,   KC_E,   KC_R,    KC_T,                                           KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
         MT(MOD_LCTL, KC_TAB), KC_A,   KC_S,   KC_D,   KC_F,    KC_G,                                           KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
         KC_LSFT,              KC_Z,   KC_X,   KC_C,   KC_V,    KC_B, KC_BSPC, MO(_RAISE), MO(_ADJUST), KC_ESC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, MO(_LOWER),
-                                      ENC_MODE_L,  KC_LALT,  KC_SPC, KC_LGUI,  MO(_LOWER), KC_ENT, KC_SPC, KC_LBRC, KC_RBRC,  MO(_RAISE)
+                                      ENC_MODE_L,  KC_LALT,  KC_SPC, KC_LGUI, MO(_LOWER), KC_ENT,  MO(_RAISE), KC_LBRC, KC_RBRC, KC_EQL
     ),
 /*
  * Lower Layer: Symbols, Navigation
@@ -62,20 +62,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Raise Layer: Functions, Numbers
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        |      | F7   | F8   | F9   |      |                              |      | 7 &  | 8 *  | 9 (  | - _  |   *    |
+ * |        |      | F9   | F10  | F11  | F12  |                              |      | 7 &  | 8 *  | 9 (  | - _  |  BSPC  |
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |      | F4   | F5   | F6   |      |                              |      | 4 *  | 5 %  | 6 ^  | = +  | RCTL   |
+ * |        |      | F5   | F6   |  F7  |  F8  |                              |      | 4 *  | 5 %  | 6 ^  |   +  |   *    |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |        |      | F1   | F2   | F3   |      |      |      |  |      |      |      | 1 !  | 2 @  | 3 #  | \ |  |        |
+ * |        |      | F1   | F2   |  F3  |  F4  |      |      |  |      |      |      | 1 !  | 2 @  | 3 #  | \ |  |        |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        |      |      |      |      |      |  |      |      | 0 )  |      |      |
- *                        |      |      |      |      |      |  |      |      |      |      |      |
+ *                        |      |      |      |      |      |  |      |      | 0 )  |      |  =   |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_RAISE] = LAYOUT(
-      _______, KC_MPRV, KC_F7,   KC_F8,   KC_F9,   KC_VOLU,                                     _______, KC_7,    KC_8,    KC_9,    KC_MINS, KC_ASTR,
-      _______, KC_MPLY, KC_F4,   KC_F5,   KC_F6,   KC_VOLD,                                     _______, KC_4,    KC_5,    KC_6,    KC_EQL,  KC_RCTL,
-      _______, KC_MNXT, KC_F1,   KC_F2,   KC_F3,   KC_MUTE, _______, _______, _______, _______, _______, KC_1,    KC_2,    KC_3,    KC_BSLASH, KC_LSFT,
+      KC_VOLU, KC_MPRV, KC_F9,   KC_F10, KC_F11,  KC_F12,                                       _______, KC_7,    KC_8,    KC_9,    KC_MINS, _______,
+      KC_VOLD, KC_MPLY, KC_F5,   KC_F6,   KC_F7,   KC_F8,                                       _______, KC_4,    KC_5,    KC_6,  S(KC_EQL),  KC_ASTR,
+      KC_MUTE, KC_MNXT, KC_F1,   KC_F2,   KC_F3,   KC_F4,   AG_TOGG, _______, _______, _______, _______, KC_1,    KC_2,    KC_3,  KC_BSLASH, KC_LSFT,
                                  _______, _______, _______, _______, _______, _______, _______, KC_0,    _______, _______
     ),
 /*
