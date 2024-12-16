@@ -1,1 +1,1 @@
-DEFAULT_FOLDER = crkbd/rev1
+DEFAULT_FOLDER = crkbd/rev4_1/standard
