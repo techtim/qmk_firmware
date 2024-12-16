@@ -11,6 +11,7 @@
 #define I2C1_SCL_PIN GP7
 
 #define SPLIT_USB_DETECT
+#define TAPPING_TERM 150
 
 /* RP2040- and hardware-specific config */
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET // Activates the double-tap behavior
